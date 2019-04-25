@@ -7070,7 +7070,9 @@ p {
   margin-bottom: 0; }
 
 .mdsync-container {
-  width: 1170px; }
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .btn {
   padding-top: 10px !important;
