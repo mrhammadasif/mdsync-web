@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 @import url(../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
-.gradient, #pinBoxModal .modal-header, .header, .mdsync.table thead tr {
-  background-image: linear-gradient(224deg, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%); }
-  .gradient-text {
-    background-image: linear-gradient(-224deg, #39abb2 0%, #39abb2 37%, #287ad7 77%, #287ad7 100%);
+.gradient, #pinBoxModal .modal-header, .header, .mdsync.table thead {
+  background: #39abb2;
+  background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
+  background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%); }
+  .gradient-text, .sub-header .sub-nav-item:hover {
+    background: #39abb2;
+    background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
+    background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; }
@@ -7193,23 +7197,12 @@ p {
     font-size: 19px;
     font-weight: bold; }
     .sub-header .sub-nav-item .icon {
-      background: transparent center center no-repeat;
-      width: 22px;
-      height: 22px;
       margin-right: 5px;
-      background-size: contain; }
-  .sub-header .sub-nav-item:nth-child(1) .icon {
-    background-image: url(../img/ic_directory.svg); }
-  .sub-header .sub-nav-item:nth-child(2) .icon {
-    background-image: url(../img/ic_broadcast.svg); }
-  .sub-header .sub-nav-item:nth-child(3) .icon {
-    background-image: url(../img/ic_schedule.svg); }
-  .sub-header .sub-nav-item:nth-child(4) .icon {
-    background-image: url(../img/ic_locker.svg); }
-  .sub-header .sub-nav-item:nth-child(5) .icon {
-    background-image: url(../img/ic_forum.svg); }
-  .sub-header .sub-nav-item:nth-child(6) .icon {
-    background-image: url(../img/ic_tracking.svg); }
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .sub-header .sub-nav-item:hover .icon path {
+      fill: url(#mdsync-svg-gradient); }
 
 .mdsync.table {
   border-top-left-radius: 4px !important;
@@ -7217,6 +7210,8 @@ p {
   background: white; }
   .mdsync.table th {
     border: none !important; }
+  .mdsync.table thead {
+    background-attachment: fixed; }
   .mdsync.table thead tr {
     border-top-right-radius: 4px !important; }
     .mdsync.table thead tr th:first-child {

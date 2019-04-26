@@ -1,17 +1,15 @@
 // override variables here
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-
+@import "mixin-gradient";
 $enable-rounded: true;
 $primary: #39abb2;
 $secondary: #287ad7;
 $primary-dark-text: #012c61;
 
 .gradient {
-  background-image: linear-gradient(224deg, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
-  // background-image: linear-gradient(to left, #39abb2 0%, #39abb2 22%, #2c85ce 100%);
-
+  @include linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
   &-text {
-    background-image: linear-gradient(-224deg, #39abb2 0%, #39abb2 37%, #287ad7 77%, #287ad7 100%);
+    @include linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -187,30 +185,17 @@ p {
     font-size: 19px;
     font-weight: bold;
     .icon {
-      background: transparent center center no-repeat;
-      width: 22px;
-      height: 22px;
       margin-right: 5px;
-      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-  }
-  .sub-nav-item:nth-child(1) .icon {
-    background-image: url(../img/ic_directory.svg);
-  }
-  .sub-nav-item:nth-child(2) .icon {
-    background-image: url(../img/ic_broadcast.svg);
-  }
-  .sub-nav-item:nth-child(3) .icon {
-    background-image: url(../img/ic_schedule.svg);
-  }
-  .sub-nav-item:nth-child(4) .icon {
-    background-image: url(../img/ic_locker.svg);
-  }
-  .sub-nav-item:nth-child(5) .icon {
-    background-image: url(../img/ic_forum.svg);
-  }
-  .sub-nav-item:nth-child(6) .icon {
-    background-image: url(../img/ic_tracking.svg);
+    &:hover {
+      @extend .gradient-text;
+      .icon path {
+        fill: url(#mdsync-svg-gradient);
+      }
+    }
   }
 }
 .mdsync {
@@ -221,9 +206,13 @@ p {
     th {
       border: none !important;
     }
+    thead {
+      // display: table-row-group;
+      background-attachment: fixed;
+      @extend .gradient;
+    }
     thead tr {
       border-top-right-radius: 4px !important;
-      @extend .gradient;
       th:first-child {
         border-top-left-radius: 4px !important;
       }
