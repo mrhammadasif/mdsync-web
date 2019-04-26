@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MDSYNCNET</title>
+  </head>
+  <body>
+    <div class="header" data-include="partials/header.html"></div>
+
+    <div class="sub-header shadow-sm" data-include="partials/sub-header.html"></div>
+
+    <section class="header-filter mdsync-container py-20" data-include="partials/filters-user.html"></section>
+
+    <page class="home d-flex flex-column align-items-stretch justify-content-between">
+      <div class="mdsync-container">
+        <table class="mdsync table shadow-sm table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>User Type</th>
+              <th>Privilege</th>
+              <th>Expiration Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-repeat="8" data-include="partials/single-row-user.html"></tr>
+          </tbody>
+        </table>
+      </div>
+    </page>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-svg-inline.js"></script>
+    <script src="js/includer.js"></script>
+  </body>
+</html>

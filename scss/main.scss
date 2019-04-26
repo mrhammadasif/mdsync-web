@@ -200,6 +200,9 @@ p {
 }
 .mdsync {
   &.table {
+    &.table-striped tbody tr:nth-of-type(odd) {
+      background: #f5f9fc;
+    }
     border-top-left-radius: 4px !important;
     border-top-right-radius: 4px !important;
     background: white;
@@ -209,6 +212,9 @@ p {
     thead {
       background-attachment: fixed;
       @extend .gradient;
+    }
+    td {
+      vertical-align: middle;
     }
     tbody.row-toggler {
       tr td {
@@ -313,4 +319,19 @@ p {
     padding: 0 12px;
     background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat;
   }
+
+  @at-root input#{&} {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border: none;
+    height: 35px;
+    width: 100%;
+    padding: 0 12px;
+    // background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
 }

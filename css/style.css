@@ -7208,10 +7208,14 @@ p {
   border-top-left-radius: 4px !important;
   border-top-right-radius: 4px !important;
   background: white; }
+  .mdsync.table.table-striped tbody tr:nth-of-type(odd) {
+    background: #f5f9fc; }
   .mdsync.table th {
     border: none !important; }
   .mdsync.table thead {
     background-attachment: fixed; }
+  .mdsync.table td {
+    vertical-align: middle; }
   .mdsync.table tbody.row-toggler tr td {
     border-top: none !important;
     font-size: 18px;
@@ -7282,3 +7286,15 @@ select.mdsync {
   width: 100%;
   padding: 0 12px;
   background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat; }
+
+input.mdsync {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: none;
+  height: 35px;
+  width: 100%;
+  padding: 0 12px; }
+
+.nowrap {
+  white-space: nowrap; }
