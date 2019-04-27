@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MDSYNCNET</title>
+  </head>
+  <body>
+    <div class="header" data-include="partials/header.html"></div>
+
+    <div class="sub-header shadow-sm" data-include="partials/sub-header.html"></div>
+
+    <page class="home d-flex flex-column align-items-stretch justify-content-between">
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5>On Call Reports</h5>
+          <div>
+            <a href="#" class="btn mdsync-btn secondary mr-2">Export to Excel</a>
+            <a href="#" class="btn mdsync-btn secondary">Print</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdsync-container mt-20 bg-white shadow-sm">
+        <div class="row m-20">
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label for="">Select User</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">Select Start Date</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <div class="btns" style="font-size:18px;font-weight: bold;">Total Shifts: 30 <span class="mx-20"></span> Total Hours: 9208</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label for="">Select Group</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">Select End Date</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <div class="btns text-right">
+                <a href="#" class="btn mdsync-btn gradient text-white">Run Report</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5>Report Results</h5>
+        </div>
+        <table class="mdsync table shadow-sm table-striped">
+          <thead>
+            <tr>
+              <th>Schedule</th>
+              <th>Practitioner</th>
+              <th>Date</th>
+              <th>Time Frame</th>
+              <th>Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-repeat="4" data-include="partials/single-row-on-call-report.html"></tr>
+          </tbody>
+        </table>
+      </div>
+    </page>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-svg-inline.js"></script>
+    <script src="js/includer.js"></script>
+  </body>
+</html>
