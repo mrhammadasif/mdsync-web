@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MDSYNCNET</title>
+  </head>
+  <body>
+    <div class="header" data-include="partials/header.html"></div>
+
+    <div class="sub-header shadow-sm" data-include="partials/sub-header.html"></div>
+
+    <page class="home d-flex flex-column align-items-stretch justify-content-between">
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5>History Filter</h5>
+
+          <a href="#" class="btn mdsync-btn secondary">Download</a>
+        </div>
+      </div>
+
+      <div class="mdsync-container mt-20 bg-white shadow-sm">
+        <div class="row m-20">
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label for="">Location</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">Who</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">From Date</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">Schedule Date</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label for="">Group</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">Type</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <label for="">To Date</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <div class="mdsync-form-group">
+              <div class="btns text-right">
+                <a href="#" class="btn mdsync-btn gradient text-white">Run Report</a>
+                <a href="#" class="btn mdsync-btn outline">Reset</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5>Report Results</h5>
+
+          <ul class="mdsync-pagination d-flex justify-content-end align-items-center">
+            <li>
+              First
+            </li>
+            <li>
+              <i class="fas fa-caret-left"></i>
+            </li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>
+              <i class="fas fa-caret-right"></i>
+            </li>
+            <li>
+              Last
+            </li>
+          </ul>
+        </div>
+        <table class="mdsync table shadow-sm table-striped">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Update Type</th>
+              <th>Change</th>
+              <th>Date Stamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-repeat="8" data-include="partials/single-row-history.html"></tr>
+          </tbody>
+        </table>
+      </div>
+    </page>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-svg-inline.js"></script>
+    <script src="js/includer.js"></script>
+  </body>
+</html>

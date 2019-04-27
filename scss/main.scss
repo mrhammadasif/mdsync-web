@@ -3,7 +3,7 @@
 @import "mixin-gradient";
 $enable-rounded: true;
 $primary: #39abb2;
-$secondary: #287ad7;
+$secondary: #3296c1;
 $primary-dark-text: #012c61;
 
 .gradient {
@@ -198,6 +198,14 @@ p {
     }
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
 .mdsync {
   &.table {
     &.table-striped tbody tr:nth-of-type(odd) {
@@ -329,6 +337,86 @@ p {
     width: 100%;
     padding: 0 12px;
     // background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat;
+  }
+
+  &-pagination {
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 36px;
+      text-align: center;
+      color: $secondary;
+      cursor: pointer;
+      &:first-child,
+      &:last-child {
+        border-radius: 4px;
+        width: 55px;
+        color: black;
+        border: 1px solid black;
+      }
+      &:last-child {
+        background: black;
+        color: white;
+      }
+
+      &.active,
+      &:hover {
+        background: $secondary;
+        color: white;
+      }
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    min-width: 152px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 2px;
+    height: 45px;
+    font-size: 16px !important;
+    padding: 11px 39px;
+    margin: 0;
+    &.secondary {
+      color: white;
+      background: $secondary;
+    }
+    &.outline {
+      background: none;
+      border: 1px solid #313131;
+      color: #313131;
+    }
+  }
+
+  &-form-group {
+    label {
+      font-size: 15px;
+      color: #323232;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: #ffffff;
+      border: 1px solid #adb2b6;
+      color: #adb2b6;
+      border-radius: 2px !important;
+      height: 45px;
+      width: 100%;
+      padding: 0 10px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      background: #fff url(../img/ic_dropdown_alt.svg) center right 12px no-repeat;
+    }
+    .btns {
+      margin-top: 32px;
+    }
   }
 }
 

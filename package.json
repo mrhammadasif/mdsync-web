@@ -7,7 +7,7 @@
   "scripts": {
     "start": "yarn serve",
     "local": "yarn browser-sync start -s -w -f 'img' 'css' '*.html'",
-    "dev": "yarn run-p start styles:watch",
+    "dev": "yarn run-p local styles:watch",
     "styles:watch": "yarn node-sass scss/main.scss css/style.css -rw scss",
     "build": "yarn styles",
     "styles": "yarn node-sass scss/main.scss css/style.css"
