@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MDSYNCNET</title>
+  </head>
+  <body>
+    <div class="header" data-include="partials/header.html"></div>
+
+    <div class="sub-header shadow-sm" data-include="partials/sub-header.html"></div>
+
+    <page class="home d-flex flex-column align-items-stretch justify-content-between">
+      <div class="mdsync-container mt-20">
+        <div class="row">
+          <div id="autoopen" class="col-4 btn mdsync-btn gradient text-white" data-toggle="modal" data-target="#profile-modal">User Profile</div>
+        </div>
+      </div>
+    </page>
+
+    <div data-include="partials/modal-profile.html"></div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-svg-inline.js"></script>
+    <script src="js/includer.js"></script>
+  </body>
+</html>

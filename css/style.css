@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 @import url(../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
-.gradient, #pinBoxModal .modal-header, .header, .mdsync.table thead {
+.gradient, .header, .mdsync.table thead, .modal .modal-header {
   background: #39abb2;
   background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
   background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%); }
@@ -7034,26 +7034,6 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-#pinBoxModal .modal-header {
-  color: white; }
-
-#pinBoxModal .modal-title {
-  text-align: center;
-  width: 100%; }
-
-#pinBoxModal .close {
-  color: white; }
-
-#pinBoxModal .form-group {
-  border: 1px solid #ddd;
-  height: 40px;
-  text-align: center; }
-
-#pinBoxModal .modal-footer a,
-#pinBoxModal .modal-footer .btn {
-  margin: 0;
-  padding: 0; }
-
 html,
 body {
   min-width: 1280px; }
@@ -7497,11 +7477,11 @@ input.mdsync {
 .row.p-0 > div {
   padding: 0; }
 
-.nav-tabs .nav-item .nav-link {
+.nav-tabs.on-details-page .nav-item .nav-link {
   width: 160px;
   text-align: center;
   color: #323232; }
-  .nav-tabs .nav-item .nav-link.active {
+  .nav-tabs.on-details-page .nav-item .nav-link.active {
     color: #39abb2;
     border: 0;
     border-bottom: 2px solid transparent;
@@ -7551,3 +7531,30 @@ td img {
     left: 0; }
   100% {
     left: -100%; } }
+
+.modal .modal-body {
+  color: #f7fbfe; }
+
+.modal .modal-header {
+  color: white; }
+
+.modal .nav {
+  background: #fff; }
+
+.modal .modal-title {
+  text-align: center;
+  width: 100%;
+  font-size: 20px !important; }
+
+.modal .close {
+  color: white; }
+
+.modal .form-group {
+  border: 1px solid #ddd;
+  height: 40px;
+  text-align: center; }
+
+.modal .modal-footer a,
+.modal .modal-footer .btn {
+  margin: 0;
+  padding: 0; }

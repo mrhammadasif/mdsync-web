@@ -18,7 +18,7 @@ $primary-dark-text: #012c61;
 }
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "modal";
+
 html,
 body {
   min-width: 1280px;
@@ -586,7 +586,7 @@ h6 {
   }
 }
 
-.nav-tabs {
+.nav-tabs.on-details-page {
   .nav-item {
     .nav-link {
       width: 160px;
@@ -665,6 +665,39 @@ td img {
     }
     100% {
       left: -100%;
+    }
+  }
+}
+
+.modal {
+  .modal-body {
+    color: #f7fbfe;
+  }
+  .modal-header {
+    @extend .gradient;
+    color: white;
+  }
+  .nav {
+    background: #fff;
+  }
+  .modal-title {
+    text-align: center;
+    width: 100%;
+    font-size: 20px !important;
+  }
+  .close {
+    color: white;
+  }
+  .form-group {
+    border: 1px solid #ddd;
+    height: 40px;
+    text-align: center;
+  }
+  .modal-footer {
+    a,
+    .btn {
+      margin: 0;
+      padding: 0;
     }
   }
 }
