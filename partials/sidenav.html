@@ -19,7 +19,8 @@
 <div id="sidebar-overlay"></div>
 <script>
   $(function() {
-    $(".sidebar-caller").on("click", function() {
+    $(".sidebar-caller").on("click", function(e) {
+      e.preventDefault()
       $("#sidebar-wrapper,#sidebar-overlay").toggle()
     })
   })
