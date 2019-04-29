@@ -4,7 +4,7 @@
   background: #39abb2;
   background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
   background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%); }
-  .gradient-text, .sub-header .sub-nav-item:hover {
+  .gradient-text, .sub-header .sub-nav-item.active, .sub-header .sub-nav-item:hover {
     background: #39abb2;
     background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
     background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
@@ -7226,7 +7226,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: center; }
-    .sub-header .sub-nav-item:hover .icon path {
+    .sub-header .sub-nav-item.active .icon path, .sub-header .sub-nav-item:hover .icon path {
       fill: url(#mdsync-svg-gradient); }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7242,6 +7242,10 @@ h1, h2, h3, h4, h5, h6 {
     border: none !important; }
   .mdsync.table thead {
     background-attachment: fixed; }
+    .mdsync.table thead.plain {
+      background: #f7fbfe; }
+      .mdsync.table thead.plain th {
+        color: #3296c1; }
   .mdsync.table .category td {
     background: #f5f9fc; }
   .mdsync.table.disabled {
@@ -7312,6 +7316,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #f5f9fc; }
     .mdsync.table tbody:not(.row-toggler) tr:hover .nav {
       opacity: 1; }
+  .mdsync.table.highlight-red tbody:not(.row-toggler) tr:hover {
+    background: #fef7f7 !important; }
 
 select.mdsync {
   -webkit-appearance: none;
@@ -7384,6 +7390,9 @@ input.mdsync {
     background: none;
     border: 1px solid #dfdfdf;
     color: #313131; }
+    .mdsync-btn.outline.secondary {
+      border-color: #3296c1;
+      color: #3296c1; }
 
 .mdsync-form-group label {
   font-size: 15px;
@@ -7505,3 +7514,40 @@ input.mdsync {
 
 .td-underline .category td {
   text-decoration: none; }
+
+td img {
+  cursor: pointer; }
+
+.toggle-header {
+  background: #fff;
+  padding: 20px 10px; }
+  .toggle-header .on {
+    display: block; }
+  .toggle-header .off {
+    display: none; }
+  .toggle-header.collapsed .on {
+    display: none; }
+  .toggle-header.collapsed .off {
+    display: block; }
+
+.marquee {
+  height: 25px;
+  color: white;
+  overflow: hidden;
+  position: relative; }
+  .marquee div {
+    display: block;
+    width: 200%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 10s linear infinite; }
+  .marquee span {
+    float: left;
+    width: 50%; }
+
+@keyframes marquee {
+  0% {
+    left: 0; }
+  100% {
+    left: -100%; } }

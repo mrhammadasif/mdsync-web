@@ -222,6 +222,7 @@ p {
       align-items: center;
       justify-content: center;
     }
+    &.active,
     &:hover {
       @extend .gradient-text;
       .icon path {
@@ -252,6 +253,12 @@ h6 {
     thead {
       background-attachment: fixed;
       @extend .gradient;
+      &.plain {
+        background: #f7fbfe;
+        th {
+          color: $secondary;
+        }
+      }
     }
     .category td {
       background: #f5f9fc;
@@ -359,6 +366,13 @@ h6 {
         opacity: 1;
       }
     }
+    &.highlight-red {
+      tbody:not(.row-toggler) {
+        tr:hover {
+          background: #fef7f7 !important;
+        }
+      }
+    }
   } // end table
 
   @at-root select#{&} {
@@ -447,6 +461,10 @@ h6 {
       background: none;
       border: 1px solid #dfdfdf;
       color: #313131;
+      &.secondary {
+        border-color: $secondary;
+        color: $secondary;
+      }
     }
   }
 
@@ -592,5 +610,61 @@ h6 {
   }
   .category td {
     text-decoration: none;
+  }
+}
+
+td img {
+  cursor: pointer;
+}
+
+.toggle-header {
+  background: #fff;
+  padding: 20px 10px;
+  .on {
+    display: block;
+  }
+  .off {
+    display: none;
+  }
+  &.collapsed {
+    .on {
+      display: none;
+    }
+    .off {
+      display: block;
+    }
+  }
+}
+
+.marquee {
+  height: 25px;
+  color: white;
+
+  overflow: hidden;
+  position: relative;
+
+  div {
+    display: block;
+    width: 200%;
+    height: 30px;
+
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 10s linear infinite;
+  }
+
+  span {
+    float: left;
+    width: 50%;
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
   }
 }
