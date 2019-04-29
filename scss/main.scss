@@ -4,6 +4,7 @@
 $enable-rounded: true;
 $primary: #39abb2;
 $secondary: #3296c1;
+$danger: #eb4f4f;
 $primary-dark-text: #012c61;
 
 .gradient {
@@ -123,27 +124,58 @@ p {
   }
 }
 .my-check {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 15px;
+
   input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
-  label {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: transparent;
-    float: left;
-  }
-  input:checked + label {
-    background: white;
-  }
+
   span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &:hover input ~ span {
+    background-color: #ccc;
+  }
+  input:checked ~ span {
+    background-color: #2196f3;
+  }
+  input:checked ~ span:after {
     display: block;
-    line-height: 20px;
-    font-size: 12px;
-    float: left;
-    color: white;
-    margin-left: 5px;
   }
 }
 .header {
@@ -336,6 +368,14 @@ h6 {
     height: 35px;
     width: 100%;
     padding: 0 12px;
+    &[type="checkbox"] {
+      background: #fff;
+      border: 1px solid #dfdfdf;
+      width: 30px;
+      height: 30px;
+      -webkit-appearance: checkbox;
+      appearance: checkbox;
+    }
     // background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat;
   }
 
@@ -376,16 +416,24 @@ h6 {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
     border-radius: 2px;
     height: 45px;
+    border: none;
     font-size: 16px !important;
-    padding: 11px 39px;
+    padding: 0 30px !important;
+    line-height: 45px;
     margin: 0;
     &.secondary {
       color: white;
       background: $secondary;
     }
+    &.slim {
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px !important;
+      min-width: 120px;
+    }
     &.outline {
       background: none;
-      border: 1px solid #313131;
+      border: 1px solid #dfdfdf;
       color: #313131;
     }
   }
@@ -404,7 +452,7 @@ h6 {
       -moz-appearance: none;
       appearance: none;
       background: #ffffff;
-      border: 1px solid #adb2b6;
+      border: 1px solid #dfdfdf;
       color: #adb2b6;
       border-radius: 2px !important;
       height: 45px;
@@ -414,12 +462,75 @@ h6 {
       margin-bottom: 20px;
       background: #fff url(../img/ic_dropdown_alt.svg) center right 12px no-repeat;
     }
+    textarea {
+      background: #ffffff;
+      border: 1px solid #dfdfdf;
+      color: #adb2b6;
+      border-radius: 2px !important;
+      height: 105px;
+      width: 100%;
+      padding: 5px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      background: #fff;
+      resize: none;
+    }
     .btns {
       margin-top: 32px;
     }
+  }
+
+  &.border-input {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
   }
 }
 
 .nowrap {
   white-space: nowrap;
+}
+.btn {
+  &.round-icon-btn {
+    width: 36px;
+    height: 36px;
+    background: $secondary;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+    margin-left: 15px;
+    &:hover {
+      background: $danger;
+    }
+  }
+  &.back-btn {
+    background: #012c61;
+    border-radius: 40px;
+    padding: 0 20px !important;
+    line-height: 30px;
+    height: 30px;
+    color: white;
+    font-size: 14px !important;
+  }
+}
+.row.p-0 {
+  > div {
+    padding: 0;
+  }
+}
+
+.nav-tabs {
+  .nav-item {
+    .nav-link {
+      width: 160px;
+      text-align: center;
+      color: #323232;
+      &.active {
+        color: $primary;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(to right, $primary, $secondary) 30;
+      }
+    }
+  }
 }

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MDSYNCNET</title>
+  </head>
+  <body>
+    <div class="header" data-include="partials/header.html"></div>
+
+    <div class="sub-header shadow-sm" data-include="partials/sub-header.html"></div>
+
+    <page class="home d-flex flex-column align-items-stretch justify-content-between">
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="#" class="btn back-btn">< Back</a>
+        </div>
+      </div>
+
+      <div class="mdsync-container mt-20">
+        <div class="d-flex justify-content-between align-items-center">
+          <select class="mdsync shadow-sm mr-2">
+            <option>DEMO Bayhealth</option>
+          </select>
+          <select class="mdsync shadow-sm mr-2">
+            <option>Cardiology</option>
+          </select>
+          <select class="mdsync shadow-sm">
+            <option>2019</option>
+          </select>
+          <div class="d-flex flex-grow-1">
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_calendar.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_mail.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_copy.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_view.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_download.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_print_2.svg" alt="" />
+            </a>
+            <a href="#" class="btn round-icon-btn">
+              <img src="img/ic_bin_remove.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mdsync-container mt-20 bg-white shadow-sm">
+        <div class="">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Directory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Swap/Change</a>
+            </li>
+          </ul>
+        </div>
+        <div class="row p-0 m-20">
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label class="w-100 d-flex"
+                >Who:
+                <a href="#" class="ml-auto text-lowercase">Manage</a>
+              </label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6 pl-2">
+            <div class="d-flex align-items-center">
+              <div class="mdsync-form-group">
+                <label for="">When:</label>
+                <select>
+                  <option>Select Here</option>
+                </select>
+              </div>
+              <span class="mx-2">OR</span>
+              <div class="w-100">
+                <div class="d-flex">
+                  <input type="text" class="mdsync border-input mr-2" placeholder="from date" />
+                  <input type="text" class="mdsync border-input" placeholder="from time" />
+                </div>
+                <div class="d-flex mt-2">
+                  <input type="text" class="mdsync border-input mr-2" placeholder="to date" />
+                  <input type="text" class="mdsync border-input" placeholder="to time" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mdsync-form-group">
+              <label for="">Repeat:</label>
+              <select>
+                <option>Select Here</option>
+              </select>
+            </div>
+            <label>
+              <input type="checkbox" name="" id="" class="mr-2" />
+              Is this a continuous event? E.g. over midnight.
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" name="" id="" class="mr-2" />
+              Is this a vacation schedule?
+            </label>
+          </div>
+          <div class="col-6 pl-2">
+            <div class="mdsync-form-group">
+              <label for="">Comments:</label>
+              <textarea rows="6"></textarea>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="btns d-flex justify-content-between">
+              <a href="#" class="btn mdsync-btn outline slim">Preview</a>
+              <div>
+                <a href="#" class="btn mdsync-btn gradient slim text-white mr-2">Submit</a>
+                <a href="#" class="btn mdsync-btn outline slim">Cancel</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdsync-container mt-20">
+        <table class="mdsync table shadow-sm">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Who</th>
+              <th>Day</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>&nbsp;</th>
+              <th>
+                <div class="d-flex justify-content-end">
+                  All &nbsp;
+                  <label class="my-check">
+                    <input type="checkbox" />
+                    <span></span>
+                  </label>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-repeat="6" data-include="partials/single-on-details-row.html"></tr>
+          </tbody>
+        </table>
+      </div>
+    </page>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-svg-inline.js"></script>
+    <script src="js/includer.js"></script>
+  </body>
+</html>
