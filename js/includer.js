@@ -6,19 +6,23 @@ $(document).ready(function() {
         $(this).load($(this).data("include"))
       })
     })
-
-    // if ($(fg).has("[data-include]")) {
-    // }
   })
 
   $("[data-repeat]").each(function(i, elem) {
     var elemToRepeat = $(elem)
-    for (var i = 1; i < parseInt(elemToRepeat.data("repeat")); i++) {
-      var cloned = elemToRepeat.clone()
-      if (cloned.has("[data-include]")) {
-        cloned.load($(cloned).data("include"))
+    if (elemToRepeat.data("include")) {
+      // first load the content and then repeat
+      elemToRepeat.load(elemToRepeat.data("include"), function(elemLoaded) {
+        for (var i = 1; i < parseInt(elemToRepeat.data("repeat")); i++) {
+          var cloned = $(elemToRepeat.clone())
+          var o = elemToRepeat.after(cloned)
+        }
+      })
+    } else {
+      for (var i = 1; i < parseInt(elemToRepeat.data("repeat")); i++) {
+        var cloned = $(elemToRepeat.clone())
+        var o = elemToRepeat.after(cloned)
       }
-      elemToRepeat.after(cloned)
     }
   })
 })

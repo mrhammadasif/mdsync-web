@@ -253,6 +253,18 @@ h6 {
       background-attachment: fixed;
       @extend .gradient;
     }
+    .category td {
+      background: #f5f9fc;
+    }
+    &.disabled {
+      background: #e5e9ed;
+      thead {
+        background: #d7dce2 !important;
+        th {
+          color: black !important;
+        }
+      }
+    }
     td {
       vertical-align: middle;
     }
@@ -569,5 +581,16 @@ h6 {
         border-image: linear-gradient(to right, $primary, $secondary) 30;
       }
     }
+  }
+}
+
+.td-underline {
+  td {
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .category td {
+    text-decoration: none;
   }
 }

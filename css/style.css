@@ -7242,6 +7242,14 @@ h1, h2, h3, h4, h5, h6 {
     border: none !important; }
   .mdsync.table thead {
     background-attachment: fixed; }
+  .mdsync.table .category td {
+    background: #f5f9fc; }
+  .mdsync.table.disabled {
+    background: #e5e9ed; }
+    .mdsync.table.disabled thead {
+      background: #d7dce2 !important; }
+      .mdsync.table.disabled thead th {
+        color: black !important; }
   .mdsync.table td {
     vertical-align: middle; }
   .mdsync.table tbody.row-toggler tr td {
@@ -7489,3 +7497,11 @@ input.mdsync {
     border: 0;
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, #39abb2, #3296c1) 30; }
+
+.td-underline td {
+  text-decoration: underline;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.td-underline .category td {
+  text-decoration: none; }
