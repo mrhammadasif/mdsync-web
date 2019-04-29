@@ -1,0 +1,26 @@
+<div id="sidebar-wrapper">
+  <a class="sidebar-caller" href="#">
+    <img src="/img/ic_sidebar_close.svg" alt="" />
+  </a>
+  <h4>User Management</h4>
+  <ul class="sidebar-nav">
+    <li><a href="#">Add a User</a></li>
+    <li><a href="#">Edit a User</a></li>
+    <li><a href="#">User Accounts</a></li>
+  </ul>
+  <h4>History</h4>
+  <ul class="sidebar-nav">
+    <li><a href="#">History</a></li>
+    <li><a href="#">Reports</a></li>
+    <li><a href="#">Marquee</a></li>
+  </ul>
+</div>
+
+<div id="sidebar-overlay"></div>
+<script>
+  $(function() {
+    $(".sidebar-caller").on("click", function() {
+      $("#sidebar-wrapper,#sidebar-overlay").toggle()
+    })
+  })
+</script>

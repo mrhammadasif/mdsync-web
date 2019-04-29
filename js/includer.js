@@ -1,6 +1,14 @@
 $(document).ready(function() {
   $("[data-include]").each(function() {
-    $(this).load($(this).data("include"))
+    var oc = $(this)
+    oc.load(oc.data("include"), function() {
+      $("[data-include]", oc).each(function() {
+        $(this).load($(this).data("include"))
+      })
+    })
+
+    // if ($(fg).has("[data-include]")) {
+    // }
   })
 
   $("[data-repeat]").each(function(i, elem) {
