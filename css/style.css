@@ -7760,3 +7760,41 @@ td img {
 
 #tab-profile-edit h3:not(:first-child) {
   margin-top: 40px; }
+
+#modal-add-user .btn.outline {
+  border-color: black; }
+
+#modal-add-user label {
+  font-size: 12px;
+  margin-top: 20px; }
+
+#modal-add-user h2 {
+  font-size: 22px; }
+
+#modal-add-user h3 {
+  font-size: 18px;
+  font-weight: bold; }
+
+#modal-add-user h3:not(:first-child) {
+  margin-top: 40px; }
+
+.popover {
+  background: #545454; }
+  .popover.bs-popover-top > .arrow::after, .popover.bs-popover-auto[x-placement^="top"] > .arrow::after {
+    border-top-color: #545454; }
+  .popover.bs-popover-bottom > .arrow::after, .popover.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+    border-bottom-color: #545454; }
+  .popover.bs-popover-left > .arrow::after, .popover.bs-popover-auto[x-placement^="left"] > .arrow::after {
+    border-left-color: #545454; }
+  .popover * {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    padding: 0; }
+
+.password-hint {
+  padding: 10px 20px; }
+  .password-hint p {
+    font-weight: bold; }
+  .password-hint ul {
+    list-style: none; }

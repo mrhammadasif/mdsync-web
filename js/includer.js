@@ -1,9 +1,19 @@
 $(document).ready(function() {
+  $("[data-toggle='popover']").popover({
+    html: true
+  })
   $("[data-include]").each(function() {
     var oc = $(this)
     oc.load(oc.data("include"), function() {
+      $("[data-toggle='popover']").popover({
+        html: true
+      })
       $("[data-include]", oc).each(function() {
-        $(this).load($(this).data("include"))
+        $(this).load($(this).data("include"), function() {
+          $("[data-toggle='popover']").popover({
+            html: true
+          })
+        })
       })
     })
   })

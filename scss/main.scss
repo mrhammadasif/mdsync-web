@@ -947,3 +947,49 @@ td img {
     }
   }
 }
+#modal-add-user {
+  .btn.outline {
+    border-color: black;
+  }
+  label {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  h3:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+.popover {
+  background: #545454;
+  &.bs-popover-top > .arrow::after {
+    border-top-color: #545454;
+  }
+  &.bs-popover-bottom > .arrow::after {
+    border-bottom-color: #545454;
+  }
+  &.bs-popover-left > .arrow::after {
+    border-left-color: #545454;
+  }
+  * {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+}
+.password-hint {
+  padding: 10px 20px;
+  p {
+    font-weight: bold;
+  }
+  ul {
+    list-style: none;
+  }
+}
