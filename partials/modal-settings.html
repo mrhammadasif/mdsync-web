@@ -1,0 +1,161 @@
+<div class="modal fade" id="modal-settings" tabindex="-1" role="dialog" aria-labelledby="pinBoxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Settings</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="/img/ic_sidebar_close.svg" alt="" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="m-20 d-flex">
+          <ul class="sub-tab-nav">
+            <li onclick="ssubtab(1)">Settings</li>
+            <li onclick="ssubtab(2)">Call Groups</li>
+            <li onclick="ssubtab(3)">Members</li>
+            <li onclick="ssubtab(4)">Teams</li>
+          </ul>
+          <div class="mx-20 flex-grow-1 subtab" id="settings-subtab-1">
+            <div class=" p-20 shadow-sm bg-white ">
+              <div class="row">
+                <div class="col-6">
+                  <label for="">Screen Refresh Rate</label>
+                  <select name="" id="" class="mdsync outline">
+                    <option value="">15 mins</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label for="">12 hr (am/pm) or 24 hr (military time)</label>
+                  <select name="" id="" class="mdsync outline">
+                    <option value="">12 hours</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mx-20 flex-grow-1 subtab" id="settings-subtab-2">
+            <div class=" p-20 shadow-sm bg-white ">
+              <label for="">Enter Group Name</label>
+              <div class="d-flex align-items-center">
+                <input type="text" class="mdsync outline" placeholder="Email Here" />
+                <div class="btn mdsync-btn gradient text-white ml-2" style="height: 35px;line-height: 35px;">Save</div>
+              </div>
+            </div>
+            <div class="mt-20">
+              <table class="mdsync table">
+                <thead>
+                  <tr>
+                    <th>Group Name</th>
+                    <th class="text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Group Name 1
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center justify-content-end">
+                        <a href="javascript://">Members <img src="/img/ic_members.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Edit <img src="/img/ic_edit.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Group Name 1
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center justify-content-end">
+                        <a href="javascript://">Members <img src="/img/ic_members.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Edit <img src="/img/ic_edit.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Group Name 1
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center justify-content-end">
+                        <a href="javascript://">Members <img src="/img/ic_members.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Edit <img src="/img/ic_edit.svg" alt=""/></a>
+                        <span class="mx-1">|</span>
+                        <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="mx-20 flex-grow-1 subtab" id="settings-subtab-3">
+            <div class=" p-20 shadow-sm bg-white ">
+              <label for="">Select Group</label>
+              <div class="d-flex align-items-center">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">ADMIN 2019_</option>
+                </select>
+                <div class="btn mdsync-btn gradient text-white ml-2" style="height: 35px;line-height: 35px;">Save</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-stretch py-20">
+                <div class="col-5 p-0">
+                  <select multiple>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                    <option value="">Option 5</option>
+                    <option value="">Option 6</option>
+                    <option value="">Option 7</option>
+                    <option value="">Option 8</option>
+                  </select>
+                </div>
+                <div class="col-1 p-0 d-flex flex-column justify-content-center">
+                  <img src="/img/ic_move_left.svg" alt="" />
+                  <br />
+                  <img src="/img/ic_move_r.svg" alt="" />
+                </div>
+                <div class="col-5 p-0">
+                  <select multiple>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                    <option value="">Option 5</option>
+                    <option value="">Option 6</option>
+                    <option value="">Option 7</option>
+                    <option value="">Option 8</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function ssubtab(n) {
+    $(".sub-tab-nav li").removeClass("active")
+    $(".sub-tab-nav li")
+      .eq(parseInt(n) - 1)
+      .addClass("active")
+    $(".subtab").hide(0)
+    $("#settings-subtab-" + n).show(0)
+  }
+  $(function() {
+    $(".subtab").hide(0)
+    ssubtab(3)
+  })
+</script>

@@ -7806,3 +7806,38 @@ td img {
     font-weight: bold; }
   .password-hint ul {
     list-style: none; }
+
+#modal-settings label {
+  font-size: 12px; }
+
+#modal-settings input,
+#modal-settings select {
+  font-size: 12px;
+  color: #adb2b6; }
+
+#modal-settings select[multiple] {
+  overflow: auto;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  color: #222; }
+  #modal-settings select[multiple] option {
+    padding: 10px 15px; }
+
+#modal-settings ul {
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  #modal-settings ul li {
+    border-left: 4px solid transparent;
+    padding: 5px 10px;
+    cursor: pointer; }
+    #modal-settings ul li.active {
+      border-left: 4px solid #3296c1; }
+    #modal-settings ul li:hover {
+      text-decoration: underline; }
+
+#modal-settings td a {
+  color: black;
+  font-size: 12px; }
