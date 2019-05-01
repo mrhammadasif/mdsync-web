@@ -1,0 +1,126 @@
+<div class="modal fade" id="modal-admin-group" tabindex="-1" role="dialog" aria-labelledby="pinBoxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Group Name</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="/img/ic_sidebar_close.svg" alt="" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="m-20 bg-white px-20 pb-20 shadow-sm">
+          <div class="row">
+            <div class="col-12">
+              <label>Practitioner</label>
+              <select name="" id="" class="mdsync outline">
+                <option value="">Select Here</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label>Start Date</label>
+              <select name="" id="" class="mdsync outline">
+                <option value="">Select Here</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label>End Date</label>
+              <select name="" id="" class="mdsync outline">
+                <option value="">Select Here</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label>Start Time</label>
+              <div class="d-flex align-items-center justify-content-between">
+                <select name="" id="" class="mdsync outline mr-1">
+                  <option value="">00</option>
+                </select>
+                <select name="" id="" class="mdsync outline mr-1">
+                  <option value="">00</option>
+                </select>
+                <select name="" id="" class="mdsync outline">
+                  <option value="">AM</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-6">
+              <label>End Time</label>
+              <div class="d-flex align-items-center justify-content-between">
+                <select name="" id="" class="mdsync outline mr-1">
+                  <option value="">00</option>
+                </select>
+                <select name="" id="" class="mdsync outline mr-1">
+                  <option value="">00</option>
+                </select>
+                <select name="" id="" class="mdsync outline">
+                  <option value="">AM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label>Comments</label>
+              <textarea name="" id="" cols="30" rows="4" class="mdsync outline"></textarea>
+            </div>
+
+            <div class="col-6">
+              <label class="my-check">
+                <input type="checkbox" name="" id="" />
+                <span></span>
+                <p>Vacation Schedule</p>
+              </label>
+              <Br />
+              <label class="my-check">
+                <input type="checkbox" name="" id="" />
+                <span></span>
+                <p>Overnight</p>
+              </label>
+              <br />
+              <label class="my-check">
+                <input type="checkbox" name="" id="" />
+                <span></span>
+                <p>Delete</p>
+              </label>
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+              <a href="#" class="btn mdsync-btn gradient text-white slim mr-1">Submit</a>
+              <a href="#" class="btn mdsync-btn outline slim">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function() {
+    $("#autoopen").trigger("click")
+
+    $(".tabs-clicker .nav-link").on("click", function() {
+      opentab($(this).attr("href"))
+    })
+
+    $(".tabs-clicker .nav-link")
+      .eq(0)
+      .trigger("click")
+  })
+
+  function opentab(id) {
+    var allSections = $(".modal-body section")
+    var currentTargetedSection = $("section" + id)
+    $(".tabs-clicker a").removeClass("active")
+    $(".tabs-clicker a[href='" + id + "']").addClass("active")
+    allSections.hide(0)
+    currentTargetedSection.show(0)
+  }
+
+  $("#subtab-2").hide(0)
+  function subtab(n) {
+    $("#tab-contact-prefs li").removeClass("active")
+    $("#tab-contact-prefs li")
+      .eq(parseInt(n) - 1)
+      .addClass("active")
+    $("#subtab-1").hide(0)
+    $("#subtab-2").hide(0)
+    $("#subtab-" + n).show(0)
+  }
+</script>

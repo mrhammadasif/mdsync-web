@@ -89,6 +89,9 @@ p {
   &t-20 {
     padding-top: 20px;
   }
+  &b-20 {
+    padding-bottom: 20px;
+  }
   &x-20 {
     padding-left: 20px;
     padding-right: 20px;
@@ -947,6 +950,7 @@ td img {
     }
   }
 }
+#modal-admin-group,
 #modal-add-user {
   .btn.outline {
     border-color: black;

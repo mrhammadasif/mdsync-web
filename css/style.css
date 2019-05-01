@@ -7098,6 +7098,9 @@ p {
 .pt-20 {
   padding-top: 20px; }
 
+.pb-20 {
+  padding-bottom: 20px; }
+
 .px-20 {
   padding-left: 20px;
   padding-right: 20px; }
@@ -7761,20 +7764,25 @@ td img {
 #tab-profile-edit h3:not(:first-child) {
   margin-top: 40px; }
 
+#modal-admin-group .btn.outline,
 #modal-add-user .btn.outline {
   border-color: black; }
 
+#modal-admin-group label,
 #modal-add-user label {
   font-size: 12px;
   margin-top: 20px; }
 
+#modal-admin-group h2,
 #modal-add-user h2 {
   font-size: 22px; }
 
+#modal-admin-group h3,
 #modal-add-user h3 {
   font-size: 18px;
   font-weight: bold; }
 
+#modal-admin-group h3:not(:first-child),
 #modal-add-user h3:not(:first-child) {
   margin-top: 40px; }
 
