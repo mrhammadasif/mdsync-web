@@ -1038,4 +1038,15 @@ td img {
     color: black;
     font-size: 12px;
   }
+  #settings-subtab-4 {
+    .mdsync-btn {
+      padding: 0 !important;
+      min-width: 120px;
+      margin-left: 10px;
+    }
+    .danger.outline {
+      color: $danger;
+      border-color: $danger;
+    }
+  }
 }

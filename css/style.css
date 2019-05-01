@@ -7841,3 +7841,12 @@ td img {
 #modal-settings td a {
   color: black;
   font-size: 12px; }
+
+#modal-settings #settings-subtab-4 .mdsync-btn {
+  padding: 0 !important;
+  min-width: 120px;
+  margin-left: 10px; }
+
+#modal-settings #settings-subtab-4 .danger.outline {
+  color: #eb4f4f;
+  border-color: #eb4f4f; }
