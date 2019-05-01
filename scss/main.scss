@@ -6,6 +6,7 @@ $primary: #39abb2;
 $secondary: #3296c1;
 $danger: #eb4f4f;
 $primary-dark-text: #012c61;
+$gd: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
 
 .gradient {
   @include linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
@@ -167,6 +168,11 @@ p {
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
     }
+  }
+  p {
+    font-size: 13px !important;
+    line-height: 25px;
+    // display: inline-block;
   }
   &:hover input ~ span {
     background-color: #ccc;
@@ -384,6 +390,11 @@ h6 {
     width: 100%;
     padding: 0 12px;
     background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat;
+  }
+  &.outline {
+    border: 1px solid #d7dce2;
+    border-radius: 2px;
+    color: #aaa;
   }
 
   @at-root input#{&} {
@@ -669,9 +680,113 @@ td img {
   }
 }
 
+// Detail Field –––––––––––––––––
+.detail-field {
+  margin-top: 5px;
+  padding-left: 10px;
+  > div:first-child {
+    width: 30px;
+  }
+  img {
+    width: 18px;
+    height: auto;
+  }
+  label {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #777;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  textarea,
+  .form-control {
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+  }
+  p {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+.my-input {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  .form-control {
+    border-radius: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    background: none !important;
+    color: white;
+    border: none;
+    font-size: 16px;
+    &::placeholder {
+      // color: fade-out($color: #fff, $amount: 0.5);
+      color: rgba(255, 255, 255, 0.5);
+    }
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  &.dark {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    .form-control {
+      color: #333333;
+      &::placeholder {
+        // color: fade-out($color: #fff, $amount: 0.5);
+        color: #999;
+      }
+    }
+  }
+  &.detail {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    .form-control {
+      color: #000;
+      font-size: 16px;
+      &::placeholder {
+        color: #999;
+      }
+    }
+  }
+}
+
+// MODAL -––––––––––––––––––––––––––––––––––––––––––––
+
 .modal {
   .modal-body {
-    color: #f7fbfe;
+    background: #f7fbfe;
+  }
+  .modal-content,
+  .modal-body {
+    padding: 0;
+    .my-check {
+      height: 16px;
+      min-width: 16px;
+      padding: 0;
+      margin: 0;
+      padding-left: 25px;
+      p {
+        padding: 0;
+        margin: 0;
+        line-height: 16px;
+      }
+      span {
+        height: 16px;
+        width: 16px;
+        &:after {
+          left: 5px;
+          top: 2px;
+          width: 4px;
+          height: 8px;
+          border-width: 0 1px 1px 0;
+        }
+      }
+    }
   }
   .modal-header {
     @extend .gradient;
@@ -679,6 +794,23 @@ td img {
   }
   .nav {
     background: #fff;
+    padding: 0;
+    .nav-item {
+      border-color: black;
+      .nav-link {
+        font-size: 12px;
+        padding: 10px 0;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 4px solid #fff;
+        color: #999;
+        &.active,
+        &:hover {
+          color: $secondary;
+          border-image: linear-gradient(to right, $secondary 0, $primary 100%) 30;
+        }
+      }
+    }
   }
   .modal-title {
     text-align: center;
@@ -699,5 +831,88 @@ td img {
       margin: 0;
       padding: 0;
     }
+  }
+}
+#tab {
+  &-profile {
+    a {
+      text-decoration: underline;
+      font-size: 12px;
+    }
+    h4 {
+      font-size: 22px;
+    }
+    .subtitle {
+      font-size: 20px;
+      color: #7e7e7e;
+    }
+    .col-heading {
+      border-bottom: 2px solid black;
+      border-image: $gd 30;
+      padding: 10px 10px;
+      @extend .gradient-text;
+    }
+  }
+  &-connect {
+    img {
+      width: 26px;
+      height: 26px;
+    }
+    label {
+      color: #b6b6b6;
+      font-size: 18px;
+    }
+    .phone {
+      font-size: 20px;
+      color: #323232;
+    }
+  }
+  &-contact-prefs {
+    input,
+    select {
+      font-size: 12px;
+      color: #adb2b6;
+    }
+    ul {
+      width: 180px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        border-left: 4px solid transparent;
+        padding: 5px 10px;
+        cursor: pointer;
+        &.active {
+          border-left: 4px solid $secondary;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    td a {
+      color: black;
+      font-size: 12px;
+    }
+  }
+  &-facilities {
+    .divider {
+      width: 1px;
+      background: #d7d7d7;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    .heading-label {
+      font-size: 17px !important;
+      color: $primary-dark-text;
+    }
+    .check-row {
+      height: 40px;
+      color: #323232;
+      font-size: 15px;
+    }
+  }
+  &-connect {
   }
 }

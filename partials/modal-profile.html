@@ -8,17 +8,455 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs nav-justified tabs-clicker">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Schedule</a>
+            <a class="nav-link active" href="#tab-profile">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Directory</a>
+            <a class="nav-link" href="#tab-contact-prefs">Contact Preferences</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Swap/Change</a>
+            <a class="nav-link" href="#tab-facilities">Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tab-settings">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tab-coverage">Coverage Exceptions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tab-connect">Connect Now</a>
           </li>
         </ul>
+
+        <section id="tab-profile">
+          <div class="m-20 p-20 bg-white shadow-sm clearfix">
+            <img class="float-left mr-20" src="/img/img_profile.png" width="100" height="100" alt="" />
+            <div>
+              <a class="d-block text-right" href="#">Edit Profile</a>
+              <h4>
+                Jones MI Brandy (1) DDS MS
+              </h4>
+              <p class="subtitle">
+                Title
+              </p>
+            </div>
+          </div>
+          <div class="m-20 px-20 pb-2 bg-white shadow-sm clearfix">
+            <div class="row">
+              <div class="col-6">
+                <div class="col-heading">Contact Details</div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_phone_call.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Contact Numbers</label>
+                    <p>(317) 567-6759</p>
+                  </div>
+                </div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_gd_mail.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Email</label>
+                    <p>darion_dickinson@gmail.com</p>
+                  </div>
+                </div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_phone_call.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Call Preferences</label>
+                    <p>In working days from 08:00AM-05:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="col-heading">Profile Information</div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_gd_stetho.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Specialty</label>
+                    <p>Neurosurgeon</p>
+                  </div>
+                </div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_gd_stetho.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Practice Name</label>
+                    <p>PEMS Associates 2</p>
+                  </div>
+                </div>
+
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div>
+                    <img src="/img/ic_gd_map.svg" alt="" />
+                  </div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Address</label>
+                    <p>Soe adaljdlkasjd alskjd</p>
+                  </div>
+                </div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div></div>
+                  <div class="my-input detail ml-2">
+                    <label for="">City & State</label>
+                    <p>City and State</p>
+                  </div>
+                </div>
+                <div class="detail-field d-flex justify-content-start align-items-center">
+                  <div></div>
+                  <div class="my-input detail ml-2">
+                    <label for="">Zip Code</label>
+                    <p>12314</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-settings">
+          <div class="m-20 p-20 shadow-sm bg-white">
+            <div class="row">
+              <div class="col-6">
+                <label for="">Personal Information (Birth Month)</label>
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Select Month</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label for="">Receive Messages from MDSYNC</label>
+                <input type="text" class="mdsync outline" placeholder="Email Here" />
+              </div>
+              <div class="col-12 clearfix mt-20">
+                <div class="btn mdsync-btn text-white float-right gradient slim">SUBMIT</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-facilities">
+          <div class="m-20">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 class="m-0 p-0">DEMO - Bayhealth</h3>
+              <div>
+                <label class="heading-label">Select Facilities</label>
+                <select name="" id="" class="mdsync shadow-sm">
+                  <option value="">DEMO - Bayhealth</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-20 shadow-sm bg-white p-20">
+              <div class="d-flex align-items-stretch justify-content-center">
+                <div class="col-6">
+                  <div class="d-flex check-row align-items-center justify-content-between">
+                    <p>DEMO - Bayhealth</p>
+                    <label class="my-check">
+                      <input type="checkbox" name="" id="" />
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="d-flex check-row align-items-center justify-content-between">
+                    <p>Column</p>
+                    <label class="my-check">
+                      <input type="checkbox" name="" id="" />
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="d-flex check-row align-items-center justify-content-between">
+                    <p>Cardiology</p>
+                    <label class="my-check">
+                      <input type="checkbox" name="" id="" />
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="divider">&nbsp;</div>
+                <div class="col-6"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-connect">
+          <div class="m-20 p-20 bg-white d-flex align-items-center">
+            <img src="/img/ic_phone_call.svg" alt="" />
+            <label class="flex-grow-1 mx-20" for="">CONTACT NUMBERS</label>
+            <div class="phone">(431) 123-2133</div>
+          </div>
+        </section>
+
+        <section id="tab-contact-prefs">
+          <div class="m-20 d-flex">
+            <ul>
+              <li onclick="subtab(1)" class="active">Contact Information</li>
+              <li onclick="subtab(2)">Email Address</li>
+            </ul>
+            <div class="mx-20 flex-grow-1" id="subtab-1">
+              <div class=" p-20 shadow-sm bg-white ">
+                <label for="">Contact Number</label>
+                <div class="d-flex">
+                  <input type="text" class="mdsync mr-1 outline" placeholder="area code" />
+                  <input type="text" class="mdsync mr-1 outline" placeholder="ext" />
+                  <input type="text" class="mdsync outline" placeholder="zip" />
+                </div>
+                <label class="mt-20" for="">Device Type</label>
+                <div class="d-flex">
+                  <select name="" id="" class="outline mdsync">
+                    <option value="">Please Select</option>
+                  </select>
+                </div>
+                <div class="d-flex w-100 mt-20">
+                  <label class="my-check">
+                    <input type="checkbox" name="" id="" />
+                    <span></span>
+                    <p>Check this box to receive SMS (Text) Messages from MDsyncNET to this number</p>
+                  </label>
+                </div>
+                <div class="d-flex w-100 mt-2">
+                  <label class="my-check">
+                    <input type="checkbox" name="" id="" />
+                    <span></span>
+                    <p>Text Messaging: Numeric only?</p>
+                  </label>
+                </div>
+                <div class="mt-2">
+                  <div class="btn mdsync-btn slim gradient text-white">Add</div>
+                </div>
+              </div>
+              <div class="mt-20">
+                <table class="mdsync table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Type</th>
+                      <th>Number</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_phone_call.svg" alt="" />
+                      </td>
+                      <td>
+                        Cellular Phone
+                      </td>
+                      <td>
+                        123-221-2334
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Hide <img src="/img/ic_view_blue.svg" alt=""/></a>
+                          <span class="mx-2">|</span>
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_phone_call.svg" alt="" />
+                      </td>
+                      <td>
+                        Cellular Phone
+                      </td>
+                      <td>
+                        123-221-2334
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Hide <img src="/img/ic_view_blue.svg" alt=""/></a>
+                          <span class="mx-2">|</span>
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_phone_call.svg" alt="" />
+                      </td>
+                      <td>
+                        Cellular Phone
+                      </td>
+                      <td>
+                        123-221-2334
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Hide <img src="/img/ic_view_blue.svg" alt=""/></a>
+                          <span class="mx-2">|</span>
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_phone_call.svg" alt="" />
+                      </td>
+                      <td>
+                        Cellular Phone
+                      </td>
+                      <td>
+                        123-221-2334
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Hide <img src="/img/ic_view_blue.svg" alt=""/></a>
+                          <span class="mx-2">|</span>
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mx-20 flex-grow-1" id="subtab-2">
+              <div class=" p-20 shadow-sm bg-white ">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="">Email <span class="text-danger">*</span></label>
+                    <input type="text" class="mdsync outline" placeholder="Email Here" />
+                  </div>
+                  <div class="col-6">
+                    <label for="">Email Address Type<span class="text-danger">*</span></label>
+                    <select name="" id="" class="mdsync outline">
+                      <option value="">Please Select</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <label class="my-check">
+                      <input type="checkbox" name="" id="" />
+                      <span></span>
+                      <p>Primary</p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-20">
+                <table class="mdsync table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Type</th>
+                      <th>Number</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_drag.svg" alt="" />
+                      </td>
+                      <td>
+                        Personal
+                      </td>
+                      <td>
+                        personal@email.com
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="/img/ic_drag.svg" alt="" />
+                      </td>
+                      <td>
+                        Business
+                      </td>
+                      <td>
+                        business@email.com
+                      </td>
+                      <td>
+                        <div class="d-flex align-items-center justify-content-end">
+                          <a href="javascript://">Delete <img src="/img/ic_delete.svg" alt=""/></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-coverage">
+          <div class="m-20 bg-white shadow-sm p-20">
+            <label>Critical Care</label>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="col-2 p-0">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Yes</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Choose</option>
+                </select>
+              </div>
+              <div class="col-6 p-0">
+                <input type="text" class="mdsync outline" placeholder="Enter Username here" />
+              </div>
+            </div>
+            <label class="mt-20">Impatient Admissions</label>
+            <div class="d-flex align-items-center justify-content-start">
+              <div class="col-2 p-0">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Yes</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Choose</option>
+                </select>
+              </div>
+            </div>
+            <label class="mt-20">OB</label>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="col-2 p-0">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Yes</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Choose</option>
+                </select>
+              </div>
+              <div class="col-6 p-0">
+                <input type="text" class="mdsync outline" placeholder="Enter Username here" />
+              </div>
+            </div>
+            <label class="mt-20">Impatient Admissions</label>
+            <div class="d-flex align-items-center justify-content-start">
+              <div class="col-2 p-0">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Yes</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select name="" id="" class="mdsync outline">
+                  <option value="">Choose</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex mt-20 justify-content-end">
+              <a href="#" class="btn mdsync-btn gradient text-white slim">UPDATE</a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -26,5 +464,30 @@
 <script>
   $(function() {
     $("#autoopen").trigger("click")
+    var allSections = $(".modal-body section")
+
+    $(".tabs-clicker .nav-link").on("click", function() {
+      var currentTargetedSection = $("section" + $(this).attr("href"))
+      $(".tabs-clicker a").removeClass("active")
+      $(".tabs-clicker a[href='" + $(this).attr("href") + "']").addClass("active")
+      // first close all tabs
+      allSections.hide(0)
+      currentTargetedSection.show(0)
+    })
+
+    $(".tabs-clicker .nav-link")
+      .eq(4)
+      .trigger("click")
   })
+
+  $("#subtab-2").hide(0)
+  function subtab(n) {
+    $("#tab-contact-prefs li").removeClass("active")
+    $("#tab-contact-prefs li")
+      .eq(parseInt(n) - 1)
+      .addClass("active")
+    $("#subtab-1").hide(0)
+    $("#subtab-2").hide(0)
+    $("#subtab-" + n).show(0)
+  }
 </script>

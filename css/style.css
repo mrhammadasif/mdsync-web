@@ -4,7 +4,7 @@
   background: #39abb2;
   background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
   background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%); }
-  .gradient-text, .sub-header .sub-nav-item.active, .sub-header .sub-nav-item:hover {
+  .gradient-text, .sub-header .sub-nav-item.active, .sub-header .sub-nav-item:hover, #tab-profile .col-heading {
     background: #39abb2;
     background: -webkit-linear-gradient(left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
     background: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
@@ -7165,6 +7165,9 @@ p {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
+  .my-check p {
+    font-size: 13px !important;
+    line-height: 25px; }
   .my-check:hover input ~ span {
     background-color: #ccc; }
   .my-check input:checked ~ span {
@@ -7308,6 +7311,11 @@ select.mdsync {
   width: 100%;
   padding: 0 12px;
   background: #fff url(../img/ic_dropdown.svg) center right 12px no-repeat; }
+
+.mdsync.outline {
+  border: 1px solid #d7dce2;
+  border-radius: 2px;
+  color: #aaa; }
 
 input.mdsync {
   -webkit-appearance: none;
@@ -7532,14 +7540,110 @@ td img {
   100% {
     left: -100%; } }
 
+.detail-field {
+  margin-top: 5px;
+  padding-left: 10px; }
+  .detail-field > div:first-child {
+    width: 30px; }
+  .detail-field img {
+    width: 18px;
+    height: auto; }
+  .detail-field label {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #777;
+    padding: 0 !important;
+    margin: 0 !important; }
+  .detail-field textarea,
+  .detail-field .form-control {
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 14px !important; }
+  .detail-field p {
+    font-weight: bold;
+    font-size: 14px; }
+
+.my-input {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  .my-input .form-control {
+    border-radius: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    background: none !important;
+    color: white;
+    border: none;
+    font-size: 16px; }
+    .my-input .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.5); }
+    .my-input .form-control:focus {
+      outline: none;
+      border: none;
+      box-shadow: none; }
+  .my-input.dark {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .my-input.dark .form-control {
+      color: #333333; }
+      .my-input.dark .form-control::placeholder {
+        color: #999; }
+  .my-input.detail {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .my-input.detail .form-control {
+      color: #000;
+      font-size: 16px; }
+      .my-input.detail .form-control::placeholder {
+        color: #999; }
+
 .modal .modal-body {
-  color: #f7fbfe; }
+  background: #f7fbfe; }
+
+.modal .modal-content,
+.modal .modal-body {
+  padding: 0; }
+  .modal .modal-content .my-check,
+  .modal .modal-body .my-check {
+    height: 16px;
+    min-width: 16px;
+    padding: 0;
+    margin: 0;
+    padding-left: 25px; }
+    .modal .modal-content .my-check p,
+    .modal .modal-body .my-check p {
+      padding: 0;
+      margin: 0;
+      line-height: 16px; }
+    .modal .modal-content .my-check span,
+    .modal .modal-body .my-check span {
+      height: 16px;
+      width: 16px; }
+      .modal .modal-content .my-check span:after,
+      .modal .modal-body .my-check span:after {
+        left: 5px;
+        top: 2px;
+        width: 4px;
+        height: 8px;
+        border-width: 0 1px 1px 0; }
 
 .modal .modal-header {
   color: white; }
 
 .modal .nav {
-  background: #fff; }
+  background: #fff;
+  padding: 0; }
+  .modal .nav .nav-item {
+    border-color: black; }
+    .modal .nav .nav-item .nav-link {
+      font-size: 12px;
+      padding: 10px 0;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 4px solid #fff;
+      color: #999; }
+      .modal .nav .nav-item .nav-link.active, .modal .nav .nav-item .nav-link:hover {
+        color: #3296c1;
+        border-image: linear-gradient(to right, #3296c1 0, #39abb2 100%) 30; }
 
 .modal .modal-title {
   text-align: center;
@@ -7558,3 +7662,70 @@ td img {
 .modal .modal-footer .btn {
   margin: 0;
   padding: 0; }
+
+#tab-profile a {
+  text-decoration: underline;
+  font-size: 12px; }
+
+#tab-profile h4 {
+  font-size: 22px; }
+
+#tab-profile .subtitle {
+  font-size: 20px;
+  color: #7e7e7e; }
+
+#tab-profile .col-heading {
+  border-bottom: 2px solid black;
+  border-image: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%) 30;
+  padding: 10px 10px; }
+
+#tab-connect img {
+  width: 26px;
+  height: 26px; }
+
+#tab-connect label {
+  color: #b6b6b6;
+  font-size: 18px; }
+
+#tab-connect .phone {
+  font-size: 20px;
+  color: #323232; }
+
+#tab-contact-prefs input,
+#tab-contact-prefs select {
+  font-size: 12px;
+  color: #adb2b6; }
+
+#tab-contact-prefs ul {
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  #tab-contact-prefs ul li {
+    border-left: 4px solid transparent;
+    padding: 5px 10px;
+    cursor: pointer; }
+    #tab-contact-prefs ul li.active {
+      border-left: 4px solid #3296c1; }
+    #tab-contact-prefs ul li:hover {
+      text-decoration: underline; }
+
+#tab-contact-prefs td a {
+  color: black;
+  font-size: 12px; }
+
+#tab-facilities .divider {
+  width: 1px;
+  background: #d7d7d7; }
+
+#tab-facilities h3 {
+  font-size: 22px; }
+
+#tab-facilities .heading-label {
+  font-size: 17px !important;
+  color: #012c61; }
+
+#tab-facilities .check-row {
+  height: 40px;
+  color: #323232;
+  font-size: 15px; }
