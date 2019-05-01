@@ -397,6 +397,15 @@ h6 {
     color: #aaa;
   }
 
+  @at-root textarea#{&} {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    padding: 0 12px;
+    resize: none;
+  }
   @at-root input#{&} {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -764,6 +773,9 @@ td img {
   .modal-content,
   .modal-body {
     padding: 0;
+    label:not(.my-check) {
+      text-transform: uppercase;
+    }
     .my-check {
       height: 16px;
       min-width: 16px;
@@ -797,6 +809,7 @@ td img {
     padding: 0;
     .nav-item {
       border-color: black;
+      flex-grow: 1;
       .nav-link {
         font-size: 12px;
         padding: 10px 0;
@@ -804,6 +817,7 @@ td img {
         border: 0;
         border-bottom: 4px solid #fff;
         color: #999;
+        text-align: center;
         &.active,
         &:hover {
           color: $secondary;
@@ -913,6 +927,23 @@ td img {
       font-size: 15px;
     }
   }
-  &-connect {
+  &-profile-edit {
+    .btn.outline {
+      border-color: black;
+    }
+    label {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    h3:not(:first-child) {
+      margin-top: 40px;
+    }
   }
 }

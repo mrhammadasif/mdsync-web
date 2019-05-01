@@ -7317,6 +7317,15 @@ select.mdsync {
   border-radius: 2px;
   color: #aaa; }
 
+textarea.mdsync {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  padding: 0 12px;
+  resize: none; }
+
 input.mdsync {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -7602,6 +7611,9 @@ td img {
 .modal .modal-content,
 .modal .modal-body {
   padding: 0; }
+  .modal .modal-content label:not(.my-check),
+  .modal .modal-body label:not(.my-check) {
+    text-transform: uppercase; }
   .modal .modal-content .my-check,
   .modal .modal-body .my-check {
     height: 16px;
@@ -7633,14 +7645,16 @@ td img {
   background: #fff;
   padding: 0; }
   .modal .nav .nav-item {
-    border-color: black; }
+    border-color: black;
+    flex-grow: 1; }
     .modal .nav .nav-item .nav-link {
       font-size: 12px;
       padding: 10px 0;
       border-radius: 0;
       border: 0;
       border-bottom: 4px solid #fff;
-      color: #999; }
+      color: #999;
+      text-align: center; }
       .modal .nav .nav-item .nav-link.active, .modal .nav .nav-item .nav-link:hover {
         color: #3296c1;
         border-image: linear-gradient(to right, #3296c1 0, #39abb2 100%) 30; }
@@ -7729,3 +7743,20 @@ td img {
   height: 40px;
   color: #323232;
   font-size: 15px; }
+
+#tab-profile-edit .btn.outline {
+  border-color: black; }
+
+#tab-profile-edit label {
+  font-size: 12px;
+  margin-top: 20px; }
+
+#tab-profile-edit h2 {
+  font-size: 22px; }
+
+#tab-profile-edit h3 {
+  font-size: 18px;
+  font-weight: bold; }
+
+#tab-profile-edit h3:not(:first-child) {
+  margin-top: 40px; }
