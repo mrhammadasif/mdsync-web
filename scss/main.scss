@@ -262,6 +262,9 @@ h6 {
     thead {
       background-attachment: fixed;
       @extend .gradient;
+      &.slim td {
+        height: 20px;
+      }
       &.plain {
         background: #f7fbfe;
         th {

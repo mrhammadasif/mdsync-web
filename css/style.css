@@ -7228,6 +7228,8 @@ h1, h2, h3, h4, h5, h6 {
     border: none !important; }
   .mdsync.table thead {
     background-attachment: fixed; }
+    .mdsync.table thead.slim td {
+      height: 20px; }
     .mdsync.table thead.plain {
       background: #f7fbfe; }
       .mdsync.table thead.plain th {

@@ -57,114 +57,113 @@
           </div>
         </div>
       </div>
-
-      <div class="mdsync-container mt-20 bg-white shadow-sm">
-        <div class="">
-          <ul class="nav nav-tabs on-details-page">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Directory</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Swap/Change</a>
-            </li>
-          </ul>
-        </div>
-        <div class="row p-0 m-20">
-          <div class="col-6">
-            <div class="mdsync-form-group">
-              <label class="w-100 d-flex"
-                >Who:
-                <a href="#" class="ml-auto text-lowercase">Manage</a>
-              </label>
-              <select>
-                <option>Select Here</option>
-              </select>
+      <div class="mdsync-container">
+        <div class="row m-0">
+          <div class="col-6 bg-white mt-20 shadow-sm">
+            <div class="">
+              <ul class="nav nav-tabs on-details-page">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Schedule</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Directory</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Swap/Change</a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="col-6 pl-2">
-            <div class="d-flex align-items-center">
+            <div>
               <div class="mdsync-form-group">
-                <label for="">When:</label>
+                <label class="w-100 d-flex"
+                  >Who:
+                  <a href="#" class="ml-auto text-lowercase">Manage</a>
+                </label>
                 <select>
                   <option>Select Here</option>
                 </select>
               </div>
-              <span class="mx-2">OR</span>
-              <div class="w-100">
-                <div class="d-flex">
-                  <input type="text" class="mdsync border-input mr-2" placeholder="from date" />
-                  <input type="text" class="mdsync border-input" placeholder="from time" />
+
+              <div class="d-flex align-items-center">
+                <div class="mdsync-form-group">
+                  <label for="">When:</label>
+                  <select>
+                    <option>Select Here</option>
+                  </select>
                 </div>
-                <div class="d-flex mt-2">
-                  <input type="text" class="mdsync border-input mr-2" placeholder="to date" />
-                  <input type="text" class="mdsync border-input" placeholder="to time" />
+                <span class="mx-2">OR</span>
+                <div class="w-100">
+                  <div class="d-flex">
+                    <input type="text" class="mdsync border-input mr-2" placeholder="from date" />
+                    <input type="text" class="mdsync border-input" placeholder="from time" />
+                  </div>
+                  <div class="d-flex mt-2">
+                    <input type="text" class="mdsync border-input mr-2" placeholder="to date" />
+                    <input type="text" class="mdsync border-input" placeholder="to time" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mdsync-form-group">
+                <label for="">Repeat:</label>
+                <select>
+                  <option>Select Here</option>
+                </select>
+              </div>
+              <label>
+                <input type="checkbox" name="" id="" class="mr-2" />
+                Is this a continuous event? E.g. over midnight.
+              </label>
+              <br />
+              <label>
+                <input type="checkbox" name="" id="" class="mr-2" />
+                Is this a vacation schedule?
+              </label>
+
+              <div class="mdsync-form-group">
+                <label for="">Comments:</label>
+                <textarea rows="6"></textarea>
+              </div>
+            </div>
+            <div class="col-12 px-0 pb-20">
+              <div class="btns d-flex justify-content-between">
+                <a href="#" class="btn mdsync-btn outline slim">Preview</a>
+                <div>
+                  <a href="#" class="btn mdsync-btn gradient slim text-white mr-2">Submit</a>
+                  <a href="#" class="btn mdsync-btn outline slim">Cancel</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="mdsync-form-group">
-              <label for="">Repeat:</label>
-              <select>
-                <option>Select Here</option>
-              </select>
-            </div>
-            <label>
-              <input type="checkbox" name="" id="" class="mr-2" />
-              Is this a continuous event? E.g. over midnight.
-            </label>
-            <br />
-            <label>
-              <input type="checkbox" name="" id="" class="mr-2" />
-              Is this a vacation schedule?
-            </label>
-          </div>
-          <div class="col-6 pl-2">
-            <div class="mdsync-form-group">
-              <label for="">Comments:</label>
-              <textarea rows="6"></textarea>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="btns d-flex justify-content-between">
-              <a href="#" class="btn mdsync-btn outline slim">Preview</a>
-              <div>
-                <a href="#" class="btn mdsync-btn gradient slim text-white mr-2">Submit</a>
-                <a href="#" class="btn mdsync-btn outline slim">Cancel</a>
-              </div>
-            </div>
+
+          <div class="col-6 pr-0 mt-20">
+            <table class="mdsync table shadow-sm">
+              <thead class="slim">
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>Who</th>
+                  <th>Day</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>&nbsp;</th>
+                  <th>
+                    <div class="d-flex justify-content-end">
+                      <label class="my-check">
+                        <input type="checkbox" />
+                        <span></span>
+                      </label>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-repeat="6" data-include="partials/single-on-details-row.html"></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-      <div class="mdsync-container mt-20">
-        <table class="mdsync table shadow-sm">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>Who</th>
-              <th>Day</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>&nbsp;</th>
-              <th>
-                <div class="d-flex justify-content-end">
-                  All &nbsp;
-                  <label class="my-check">
-                    <input type="checkbox" />
-                    <span></span>
-                  </label>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-repeat="6" data-include="partials/single-on-details-row.html"></tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="mdsync-container mt-20"></div>
     </page>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
