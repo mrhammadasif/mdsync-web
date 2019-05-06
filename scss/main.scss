@@ -464,6 +464,7 @@ h6 {
 
   &-btn {
     display: inline-block;
+    cursor: pointer;
     min-width: 152px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
     border-radius: 2px;
@@ -532,7 +533,7 @@ h6 {
       resize: none;
     }
     .btns {
-      margin-top: 32px;
+      margin-top: 22px;
     }
   }
 
@@ -613,16 +614,32 @@ h6 {
 }
 
 .nav-tabs.on-details-page {
+  @extend .gradient;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: -15px;
+  margin-right: -15px;
+
   .nav-item {
     .nav-link {
       width: 160px;
+      height: 50px;
+      line-height: 50px;
+      padding-top: 0;
+      padding-bottom: 0;
       text-align: center;
-      color: #323232;
+      color: #fff;
+      &:hover {
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+      }
       &.active {
-        color: $primary;
+        color: $secondary;
         border: 0;
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(to right, $primary, $secondary) 30;
+        background: white;
+        border-bottom: 2px solid $secondary;
+        border-radius: 0;
+        // border-image: linear-gradient(to right, $primary, $secondary) 30;
       }
     }
   }
@@ -978,6 +995,9 @@ td img {
   &.bs-popover-top > .arrow::after {
     border-top-color: #545454;
   }
+  &.bs-popover-right > .arrow::after {
+    border-right-color: #545454;
+  }
   &.bs-popover-bottom > .arrow::after {
     border-bottom-color: #545454;
   }
@@ -988,7 +1008,9 @@ td img {
     color: white;
     font-size: 12px;
     margin: 0;
-    padding: 0;
+  }
+  > {
+    padding: 20px;
   }
 }
 .password-hint {

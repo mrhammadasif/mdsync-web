@@ -2,6 +2,11 @@ $(document).ready(function() {
   $("[data-toggle='popover']").popover({
     html: true
   })
+
+  $(".hoverpopover").popover({
+    trigger: "hover",
+    placement: "bottom"
+  })
   $("[data-include]").each(function() {
     var oc = $(this)
     oc.load(oc.data("include"), function() {
@@ -14,6 +19,10 @@ $(document).ready(function() {
             html: true
           })
         })
+      })
+      $(".hoverpopover").popover({
+        trigger: "hover",
+        placement: "bottom"
       })
     })
   })
