@@ -17,12 +17,6 @@
     <page class="home d-flex flex-column align-items-stretch justify-content-between">
       <div class="mdsync-container mt-20">
         <div class="d-flex justify-content-between align-items-center">
-          <a href="#" class="btn back-btn">< Back</a>
-        </div>
-      </div>
-
-      <div class="mdsync-container mt-20">
-        <div class="d-flex justify-content-between align-items-center">
           <select class="mdsync shadow-sm mr-2">
             <option>DEMO Bayhealth</option>
           </select>
@@ -33,6 +27,9 @@
             <option>2019</option>
           </select>
           <div class="d-flex flex-grow-1">
+            <a href="#" class="btn round-icon-btn hoverpopover" data-content="color picker">
+              <i class="fas text-white fa-eye-dropper    "></i>
+            </a>
             <a href="#" class="btn round-icon-btn hoverpopover" data-content="calendar">
               <img src="img/ic_calendar.svg" alt="" />
             </a>
@@ -84,27 +81,35 @@
                 </select>
               </div>
 
-              <div class="d-flex align-items-center">
-                <div class="mdsync-form-group">
-                  <label for="">When:</label>
-                  <select>
-                    <option>Select Here</option>
-                  </select>
-                </div>
-                <span class="mx-2">OR</span>
-                <div class="w-100">
-                  <div class="d-flex">
-                    <input type="text" class="mdsync border-input mr-2" placeholder="from date" />
-                    <input type="text" class="mdsync border-input" placeholder="from time" />
+              <div class="row mb-2">
+                <div class="col-10">
+                  <div class="mdsync-form-group">
+                    <label for="">When:</label>
+                    <input type="text" class="mdsync outline" placeholder="Multiple day add (e.g. 1,5,7-10)" />
                   </div>
-                  <div class="d-flex mt-2">
-                    <input type="text" class="mdsync border-input mr-2" placeholder="to date" />
-                    <input type="text" class="mdsync border-input" placeholder="to time" />
+                </div>
+                <div class="col">
+                  <div class="mdsync-form-group">
+                    <div class="btns pt-3">OR</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="w-100">
+                    <div class="d-flex">
+                      <input type="text" class="mdsync border-input mr-2" placeholder="from date" />
+                      <input type="text" class="mdsync border-input" placeholder="from time" />
+                    </div>
+                    <div class="d-flex mt-2">
+                      <input type="text" class="mdsync border-input mr-2" placeholder="to date" />
+                      <input type="text" class="mdsync border-input" placeholder="to time" />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="mdsync-form-group">
+              <div class="mdsync-form-group mt-20">
                 <label for="">Repeat:</label>
                 <select>
                   <option>Select Here</option>
@@ -138,7 +143,7 @@
 
           <div class="col-6 pr-0 mt-20">
             <table class="mdsync table shadow-sm">
-              <thead class="slim ">
+              <thead class="slim plain bg-white">
                 <tr>
                   <th>&nbsp;</th>
                   <th>Who</th>
