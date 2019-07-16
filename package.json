@@ -24,6 +24,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.0",
+    "@fullcalendar/bootstrap": "^4.2.0",
+    "@fullcalendar/core": "^4.2.0",
+    "@fullcalendar/daygrid": "^4.2.0",
     "bootstrap": "^4.3.1",
     "icheck-bootstrap": "^3.0.1",
     "image-set-polyfill": "^0.1.5",

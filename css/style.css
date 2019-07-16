@@ -7893,87 +7893,42 @@ td img {
 .mdsync.outline::placeholder {
   color: #ccc !important; }
 
-section.event .calendar-day {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  height: 80px; }
+page.event textarea {
+  border: 1px solid #ddd; }
 
-section.event .calendar-table {
-  margin: 0 auto;
-  width: 700px; }
+.fc * {
+  border-color: #eee !important; }
 
-section.event .selected {
-  background-color: #eee; }
+.fc-toolbar {
+  background: white;
+  border: 1px solid #ddd; }
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px; }
 
-section.event .outside .date {
-  color: #ccc; }
+.fc-head-container,
+.fc-bg {
+  background: white; }
 
-section.event .timetitle {
-  white-space: nowrap;
-  text-align: right; }
+.fc-day-header {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  text-transform: uppercase;
+  border-right: 0 !important;
+  border-left: 0 !important; }
 
-section.event .event {
-  border-top: 1px solid #b2dba1;
-  border-bottom: 1px solid #b2dba1;
-  background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
-  background-repeat: repeat-x;
-  color: #3c763d;
-  border-width: 1px;
-  font-size: .75em;
-  padding: 0 .75em;
-  line-height: 2em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 1px; }
+.fc-event {
+  margin-left: 0;
+  margin-right: 20px;
+  background: #EFF7FA !important;
+  border-left: 6px solid #39abb2 !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  border-radius: 0 2px 2px 0; }
+  .fc-event .fc-content {
+    color: black; }
 
-section.event .event.begin {
-  border-left: 1px solid #b2dba1;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-section.event .event.end {
-  border-right: 1px solid #b2dba1;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-section.event .event.all-day {
-  border-top: 1px solid #9acfea;
-  border-bottom: 1px solid #9acfea;
-  background-image: linear-gradient(to bottom, #d9edf7 0px, #b9def0 100%);
-  background-repeat: repeat-x;
-  color: #31708f;
-  border-width: 1px; }
-
-section.event .event.all-day.begin {
-  border-left: 1px solid #9acfea;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-section.event .event.all-day.end {
-  border-right: 1px solid #9acfea;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-section.event .event.clear {
-  background: none;
-  border: 1px solid transparent; }
-
-section.event .table-tight > thead > tr > th,
-section.event .table-tight > tbody > tr > th,
-section.event .table-tight > tfoot > tr > th,
-section.event .table-tight > thead > tr > td,
-section.event .table-tight > tbody > tr > td,
-section.event .table-tight > tfoot > tr > td {
-  padding-left: 0;
-  padding-right: 0; }
-
-section.event .table-tight-vert > thead > tr > th,
-section.event .table-tight-vert > tbody > tr > th,
-section.event .table-tight-vert > tfoot > tr > th,
-section.event .table-tight-vert > thead > tr > td,
-section.event .table-tight-vert > tbody > tr > td,
-section.event .table-tight-vert > tfoot > tr > td {
-  padding-top: 0;
-  padding-bottom: 0; }
+.fc-today {
+  background: #f2f2f2; }

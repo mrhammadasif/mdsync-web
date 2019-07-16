@@ -1109,3 +1109,48 @@ td img {
   color: #ccc !important;
 }
 
+page.event {
+  textarea {
+    border: 1px solid #ddd;
+  }
+}
+// full calendar extensive settings
+.fc *{
+  border-color: #eee !important;
+}
+.fc-toolbar {
+  background: white;
+  border: 1px solid #ddd;
+  &.fc-header-toolbar {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.fc-head-container,
+.fc-bg {
+  background: white;
+}
+.fc-day-header {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  text-transform: uppercase;
+  border-right: 0 !important;
+  border-left: 0 !important;
+}
+.fc-event{
+  margin-left: 0;
+  margin-right: 20px;
+  background: #EFF7FA !important;
+  border-left: 6px solid $primary !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  border-radius: 0 2px 2px 0;
+  .fc-content {
+    color: black;
+  }
+}
+.fc-today {
+  background: #f2f2f2;
+}
