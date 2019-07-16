@@ -193,6 +193,19 @@ p {
   .d-flex {
     height: 70px;
   }
+  img {
+    z-index: 2;
+  }
+  .bg-logo {
+    background: white;
+    width: 30%;
+    position: absolute;
+    height: 70px;
+    left: -40px;
+    top: 0;
+    transform: skewX(30deg);
+    z-index: 1;
+  }
 
   .para {
     font-size: 15px;
@@ -212,6 +225,18 @@ p {
       text-decoration: underline;
       font-weight: bold;
       font-size: 16px;
+    }
+  }
+  .andar-wala-form {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 44px;
+    width: 100%;
+    padding: 0 10px;
+    input {
+      background: none !important;
+      border: none !important;
     }
   }
 }

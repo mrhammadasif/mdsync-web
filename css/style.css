@@ -7182,6 +7182,17 @@ p {
   height: 70px; }
   .header .d-flex {
     height: 70px; }
+  .header img {
+    z-index: 2; }
+  .header .bg-logo {
+    background: white;
+    width: 30%;
+    position: absolute;
+    height: 70px;
+    left: -40px;
+    top: 0;
+    transform: skewX(30deg);
+    z-index: 1; }
   .header .para {
     font-size: 15px;
     color: #ffffff;
@@ -7197,6 +7208,16 @@ p {
     text-decoration: underline;
     font-weight: bold;
     font-size: 16px; }
+  .header .andar-wala-form {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 44px;
+    width: 100%;
+    padding: 0 10px; }
+    .header .andar-wala-form input {
+      background: none !important;
+      border: none !important; }
 
 .sub-header {
   height: 70px;

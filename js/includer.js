@@ -1,3 +1,21 @@
+function openSearch() {
+  $("#header-nav").removeClass("d-flex")
+  $("#header-nav").addClass("d-none")
+
+  $(".marquee").addClass("d-none")
+  
+  $("#search-section").removeClass("d-none")
+  $("#search-section").addClass("d-flex")
+}
+function closeSearch() {
+  $("#header-nav").removeClass("d-none")
+  $("#header-nav").addClass("d-flex")
+
+  $(".marquee").removeClass("d-none")
+
+  $("#search-section").removeClass("d-flex")
+  $("#search-section").addClass("d-none")
+}
 $(document).ready(function() {
   $("[data-toggle='popover']").popover({
     html: true
