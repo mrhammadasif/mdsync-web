@@ -17,16 +17,20 @@
     <page class="home d-flex flex-column align-items-stretch justify-content-between">
       <div class="mdsync-container mt-20">
         <div class="d-flex justify-content-between align-items-center">
-          <select class="mdsync shadow-sm mr-2">
-            <option>DEMO Bayhealth</option>
-          </select>
-          <select class="mdsync shadow-sm mr-2">
-            <option>Cardiology</option>
-          </select>
-          <select class="mdsync shadow-sm">
-            <option>2019</option>
-          </select>
-          <div class="d-flex flex-grow-1">
+          <div class="d-flex col-6 pl-0 align-items-center">
+            <select class="mdsync shadow-sm mr-2">
+              <option>DEMO Bayhealth</option>
+            </select>
+            <select class="mdsync shadow-sm mr-2">
+              <option>Cardiology</option>
+            </select>
+            <img src="img/l_arrow.png" alt="" style="height: 22px;">
+            <select class="mdsync shadow-sm mx-2">
+              <option>2019</option>
+            </select>
+            <img src="img/r_arrow.png" alt="" style="height: 22px;">
+          </div>
+          <div class="d-flex justify-content-end">
             <a href="#" class="btn round-icon-btn hoverpopover" data-content="color picker">
               <i class="fas text-white fa-eye-dropper    "></i>
             </a>
@@ -56,10 +60,10 @@
       </div>
       <div class="mdsync-container">
         <div class="row m-0">
-          <div class="col-6 bg-white mt-20 shadow-sm">
+          <div class="col-6 bg-white mt-20 px-0 shadow-sm">
             <div class="pb-2">
-              <ul class="nav nav-tabs on-details-page">
-                <li class="nav-item">
+              <ul class="nav gradient nav-tabs on-details-page bg-none">
+                <li class="nav-item active">
                   <a class="nav-link active" href="#">Schedule</a>
                 </li>
                 <li class="nav-item">
@@ -70,7 +74,7 @@
                 </li>
               </ul>
             </div>
-            <div>
+            <div class="px-3">
               <div class="mdsync-form-group">
                 <label class="w-100 d-flex"
                   >Who:
@@ -110,12 +114,46 @@
               </div>
 
               <div class="mdsync-form-group mt-20">
-                <label for="">Repeat:</label>
-                <select>
-                  <option>Select Here</option>
-                </select>
+                <label for="">Repeat Every:</label>
+                <div class="d-flex align-items-center justify-content-start">
+                  <input type="text" class="form-control" style="width: 40px;">
+                  <span class="ml-2">weeks</span>
+                </div>
               </div>
-              <label>
+              <div class="mdsync-form-group mt-20">
+                <label for="">Repeat Every:</label>
+                <div class="d-flex align-items-center justify-content-between">
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Mon
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Tue
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Wed
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Thu
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Fri
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Sat
+                  </label>
+                  <label>
+                    <input type="checkbox" name="" id="">
+                    Sun
+                  </label>
+                </div>
+              </div>
+              <label class="mt-4">
                 <input type="checkbox" name="" id="" class="mr-2" />
                 Is this a continuous event? E.g. over midnight.
               </label>
@@ -124,13 +162,20 @@
                 <input type="checkbox" name="" id="" class="mr-2" />
                 Is this a vacation schedule?
               </label>
-
+              <hr class="my-4">
+              
               <div class="mdsync-form-group">
                 <label for="">Comments:</label>
                 <textarea rows="6"></textarea>
               </div>
+              <hr class="my-4" />
+              <div class="mdsync-form-group">
+                <label for="">Save as:</label>
+                <input type="text" class="form-control">
+              </div>
+              <hr class="my-4" />
             </div>
-            <div class="col-12 px-0 pb-20">
+            <div class="col-12 px-3 pb-20 pt-4">
               <div class="btns d-flex justify-content-between">
                 <a href="#" class="btn mdsync-btn outline slim">Preview</a>
                 <div>
@@ -138,12 +183,34 @@
                   <a href="#" class="btn mdsync-btn outline slim">Cancel</a>
                 </div>
               </div>
+              <hr class="my-5">
+              <div class="mt-5">
+                <table class="table table-borderless">
+                  <thead>
+                    <th>MODIFY OR DELETE EXISTING RECURRANCE</th>
+                    <th>&nbsp;</th>
+                  </thead>
+                  <tr class="border">
+                    <td  class="text-secondary">Weekdays All Day</td>
+                    <td>
+                      <img src="img/ic_delete.svg" alt="">
+                    </td>
+                  </tr>
+                  <tr class="border">
+                    <td  class="text-secondary">Weekdays Only 7a - 7p</td>
+                    <td>
+                      <img src="img/ic_delete.svg" alt="">
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
             </div>
           </div>
 
           <div class="col-6 pr-0 mt-20">
             <table class="mdsync table shadow-sm">
-              <thead class="slim plain bg-white">
+              <thead class="gradient">
                 <tr>
                   <th>&nbsp;</th>
                   <th>Who</th>
@@ -162,7 +229,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr data-repeat="6" data-include="partials/single-on-details-row.html"></tr>
+                <tr data-repeat="12" data-include="partials/single-on-details-row.html"></tr>
               </tbody>
             </table>
           </div>

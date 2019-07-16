@@ -7,6 +7,7 @@ $secondary: #3296c1;
 $danger: #eb4f4f;
 $primary-dark-text: #012c61;
 $gd: linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
+$gd-reverse: linear-gradient(to left, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
 
 .gradient {
   @include linear-gradient(to right, #39abb2 0%, #39abb2 30%, #287ad7 86%, #287ad7 100%);
@@ -658,13 +659,15 @@ h6 {
       padding-top: 0;
       padding-bottom: 0;
       text-align: center;
-      color: #323232;
+      color: white;
+      border: 0;
 
       &.active {
-        color: $primary;
+        background: $gd;
         border: 0;
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(to right, $primary, $secondary) 30;
+        height: 50px;
+        // border-bottom: 2px solid transparent;
+        // border-image: linear-gradient(to right, $primary, $secondary) 30;
       }
     }
   }
@@ -1105,3 +1108,4 @@ td img {
 .mdsync.outline::placeholder {
   color: #ccc !important;
 }
+
