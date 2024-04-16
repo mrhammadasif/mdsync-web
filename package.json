@@ -8,30 +8,30 @@
     "start": "pnpm serve",
     "local": "pnpm browser-sync start -s -w -f 'img' 'css' '*.html'",
     "dev": "pnpm run-p local styles:watch",
-    "styles:watch": "pnpm node-sass scss/main.scss css/style.css -rw scss",
+    "styles:watch": "pnpm sass scss/main.scss css/style.css -rw scss",
     "build": "pnpm styles",
-    "styles": "pnpm node-sass scss/main.scss css/style.css"
+    "styles": "pnpm sass scss/main.scss css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "devDependencies": {
-    "browser-sync": "^2.27.11",
-    "node-sass": "^8.0.0",
+    "browser-sync": "^3.0.2",
     "npm-run-all": "^4.1.5",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
-    "@fullcalendar/bootstrap": "^6.1.1",
-    "@fullcalendar/core": "^6.1.1",
-    "@fullcalendar/daygrid": "^6.1.1",
-    "bootstrap": "^5.2.3",
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fullcalendar/bootstrap": "^6.1.11",
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "bootstrap": "^5.3.3",
     "icheck-bootstrap": "^3.0.1",
     "image-set-polyfill": "^0.1.5",
-    "jquery": "^3.6.3",
+    "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
-    "serve": "^14.2.0"
+    "sass": "^1.75.0",
+    "serve": "^14.2.1"
   }
 }
